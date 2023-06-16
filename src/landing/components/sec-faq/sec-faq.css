@@ -1,0 +1,73 @@
+.faq-images{
+    padding-top: 3rem;
+}
+.faq-images img{
+    position: absolute;
+}
+.faq-images img:nth-child(1){
+    right:0;
+    top:1.2rem
+}
+.faq-images img:nth-child(2){
+    right:8%;
+    top:-.5rem
+}
+.faq-images img:nth-child(3){
+    left:0;
+    top:-1rem
+}
+.all-faq{
+    max-width:960px;
+    margin-bottom:2.5rem;
+    padding-top:1rem;
+}
+.faq-row{
+    border-bottom:1px solid #99CBFD;
+}
+.question{
+    padding:1rem 0;
+    text-align: right;
+}
+.question img{
+    margin:0 .5rem;
+    transition: .25s;
+}
+.faq-row.active .question img{
+    transform: rotate(180deg);
+}
+.faq-row.active .text-xl{
+    color: var(--primary);
+}
+.answer{
+    transition: .3s;
+    display: grid;
+    grid-template-rows: 0fr;
+}
+.answer[aria-expanded="true"]{
+    grid-template-rows: 1fr;
+    padding-bottom:.5rem;
+}
+.answer .text-base{
+    overflow: hidden;
+    max-width:780px;
+   
+}
+.answer ul{
+    list-style: none;
+    padding:0;
+}
+.answer li{
+    position: relative;
+    padding-right:1.4rem;
+    margin-bottom:.4rem;
+}
+.answer li:before{
+    content:"";
+    display:block;
+    width:16px;
+    height:16px;
+    position:absolute;
+    top:.3rem;
+    right: 0;
+    background: url('../../assets/images/ok-blue.svg') no-repeat center;
+}

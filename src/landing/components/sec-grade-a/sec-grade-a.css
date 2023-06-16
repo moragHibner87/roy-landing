@@ -1,0 +1,42 @@
+.grade-img-floats img{
+    position:absolute;
+}
+.iphone{
+    width:150px;
+    left: -15%;
+    top: 27%;
+}
+.book{
+    bottom: 25%;
+    right:1%;
+}
+.paint{
+    bottom: 8%;
+    right:6%;
+}
+@media only screen and (max-width:1200px) {
+    .girl{
+        width:420px;
+    }
+}
+@media only screen and (max-width:768px) {
+    .grade-img-wrap{
+        margin-left:8%;
+        margin-bottom:.4rem;
+    }
+}
+@media only screen and (max-width:650px) {
+    .girl{
+        width:auto;
+    }
+    .iphone{
+        width:100px;
+        left:-12%;
+    }
+    .book{
+        width:60px;
+    }
+    .paint{
+        width:50px;
+    }
+}

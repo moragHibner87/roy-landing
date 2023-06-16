@@ -1,0 +1,26 @@
+.grade-img-floats img{
+    position:absolute;
+}
+
+.baloon{
+    top: 0%;
+    right:20%;
+}
+.pen{
+    bottom: 4%;
+    left:20%;
+}
+
+@media only screen and (max-width:768px) {
+    .sec-best .grade-img-wrap{
+        margin-left:0;
+    }
+}
+@media only screen and (max-width:650px) {
+    .baloon{
+        width:70px;
+    }
+    .pen{
+        width:58px;
+    }
+}

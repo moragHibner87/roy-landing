@@ -1,0 +1,46 @@
+.about-img-wrap{
+    background: #FFFFFF;
+    box-shadow: 0px 5px 22px rgba(32, 63, 145, 0.25);
+    border-radius: 22px;
+    width:100%;
+    max-width:420px;
+    padding:.5rem;
+    margin-top:3rem;
+}
+.about-img{
+    width:100%;
+    padding-top:110%;
+    border-radius: 22px;
+    overflow: hidden;
+}
+.wave{
+    position:absolute;
+    right: -20px;
+    top: 10%;
+    z-index: 1;
+}
+.about-name{
+    position:absolute;
+    bottom:0;
+    background: url('../../assets/images/about-name.png') no-repeat center top;
+    background-size: cover;
+    z-index:1;
+    width:100%;
+    padding-top:90px;
+    min-height:150px;
+}
+.about-name *{
+    font-size: .9rem;
+}
+
+@media only screen and (max-width:768px) {
+    .about-img-wrap{
+        max-width:300px;
+        padding:.3rem;
+        margin-bottom:1.5rem;
+        margin-top:0;
+    }
+    .wave{
+        width:70px;
+    }
+}

@@ -1,0 +1,28 @@
+.socials{
+    gap: 2.5rem;
+    margin:3rem 0;
+}
+.socials img{
+    transition: .25s;
+}
+.socials a:hover img{
+    transform: translateY(-5px);
+}
+.allrights{
+    padding:.3rem 0 1rem;
+    font-size:.9rem;
+    color:#8D8C9A;
+}
+
+@media only screen and (max-width:768px) {
+    .socials{
+        gap: .6rem;
+        margin:1.5rem 0;
+    }
+    .socials img{
+        width:48px;
+    }
+    .allrights{
+        font-size:.7rem;
+    }
+}
