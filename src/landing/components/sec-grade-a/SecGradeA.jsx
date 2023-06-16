@@ -7,7 +7,7 @@ import './sec-grade-a.css'
 
 function SecGrdeA(){
     return(
-        <section className="sec-grade-a bg-blue-light py-4">
+        <section id="SecGrdeA" className="sec-grade-a bg-blue-light py-4">
             <div className="container flex items-center justify-between">
                 <div className='m-100 w-50 m-text-center'>
                     <div className='grade-img-wrap relative inline'>

@@ -7,7 +7,7 @@ import './sec-about.css'
 function SecAbout(){
 
     return(
-        <section className="sec-about bg-blue-light py-4 over-hide">
+        <section id="SecAbout" className="sec-about bg-blue-light py-4 over-hide">
             <div className="container flex justify-between">
                 <div className='m-100 w-50 m-text-center'>
                     <div className='about-img-wrap relative inline text-center'>

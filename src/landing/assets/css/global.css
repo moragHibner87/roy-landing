@@ -199,6 +199,7 @@ max-width:670px;
     height:30px;
     background: url('../images/arrow-r.svg') no-repeat center;
     transition: .25s;
+    z-index:3;
 }
 .swiper-button-prev{
     background-image: url('../images/arrow-l.svg');

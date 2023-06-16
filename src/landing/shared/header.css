@@ -34,6 +34,25 @@ transition: .25s;
 .app_menu_btn span:nth-child(2){
 width: 60%;
 }
+.backtop{
+    position: fixed;
+    bottom:40px;
+    right:30px;
+    background-color: white;
+    z-index:5;
+    width:55px;
+    border-radius:50%;
+    aspect-ratio: 1;
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.15);
+    transition: .3s;
+    pointer-events: none;
+    opacity: 0;
+}
+.backtop.show{
+    opacity: 1;
+    pointer-events: all;
+}
+
 
 @media only screen and (max-width:1024px) {
     .menu{
@@ -79,5 +98,13 @@ width: 60%;
    }
    .header .container{
     height:70px;
+    }
+    .backtop{
+        width:48px;
+        right:15px;
+        bottom:22px;
+    }
+    .backtop img{
+        width:20px;
     }
 }

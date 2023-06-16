@@ -25,7 +25,7 @@ function SecFAQ(){
       };
 
     return(
-        <section className="sec-faq py-4">
+        <section id='SecFAQ' className="sec-faq py-4">
             <div className="container relative">
                 <div className='faq-images only-desk'>
                     <img className='' src={Apple} alt='Apple'/>

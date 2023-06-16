@@ -10,7 +10,7 @@ import './sec-night.css'
 
 function SecNight(){
     return(
-        <section className="sec-night py-4 relative text-center text-white">
+        <section id="SecNight" className="sec-night py-4 relative text-center text-white">
             <div className="container z-2">
                 <div className='all-ships flex justify-center'>
                     <img className='' src={ShipA} alt='ShipA'/>

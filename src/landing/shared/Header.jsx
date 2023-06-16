@@ -1,47 +1,76 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 import './header.css'
 import Logo from '../assets/images/logo.svg'
-import Close from '../assets/images/close.svg'
+import ArrowUp from '../assets/images/arrow-up.svg'
+import MobileMenu from './MobileMenu';
 
 function Header(){
+    const [isBtVisible, setIsBtVisible] = useState(false)
     const [isOpen, setIsOpen] = useState(false)
+
+    const toggleMenu = () => {
+        setIsOpen(!isOpen);
+    };
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const offsetTop = window.scrollY || document.documentElement.scrollTop;
+            setIsBtVisible(offsetTop > 800);
+        }
+
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+            window.removeEventListener('scroll', handleScroll)
+        }
+    }, []);
+
+    const scrollToTop = () => {
+        window.scrollTo({
+            top:0
+        })
+    }
+
     return(
+        <> 
         <header className="header bg-white">
             <div className="container flex items-center justify-between">
                 <a className='logo' href="" target="_blank">
                     <img src={Logo} className="" alt="דמיון בקופסא" />
                 </a>
-                <nav className='menu' aria-expanded={isOpen? 'true' : 'false'}>
-                    <button onClick={() => setIsOpen(!isOpen)} className="app_menu_close only-tablet" aria-label="סגור תפריט">
-                        <img src={Close} className="" alt="סגור" />
-                    </button>
+                <nav className='menu only-desk-xl'>
                     <ul className='flex'>
                         <li>
-                            <a href="#root" onClick={() => setIsOpen(!isOpen)} style={{fontWeight: 'bold'}}>ראשי</a>
+                            <a href="#root" style={{fontWeight: 'bold'}}>ראשי</a>
                         </li>
                         <li>
-                            <a href="">הכנה לכיתה א</a>
+                            <a href="#SecGrdeA">הכנה לכיתה א</a>
                         </li>
                         <li>
-                            <a href="">על הקורס</a>
+                            <a href="#SecNight">על הקורס</a>
                         </li>
                         <li>
-                            <a href="">שאלות ותשובות</a>
+                            <a href="#SecFAQ">שאלות ותשובות</a>
                         </li>
                         <li>
-                            <a href="">אודות</a>
+                            <a href="#SecAbout">אודות</a>
                         </li>
                         <li>
-                            <a href="">צור קשר</a>
+                            <a href="#Footer">צור קשר</a>
                         </li>
                     </ul>
                 </nav>
-                <button onClick={() => setIsOpen(!isOpen)} className="app_menu_btn only-tablet" aria-label="פתח תפריט">
+                <button onClick={toggleMenu} className="app_menu_btn only-tablet" aria-label="פתח תפריט">
                     <span></span><span></span><span></span>
                 </button>
+                <MobileMenu isOpen={isOpen} toggleMenu={toggleMenu}/>
             </div>
         </header>
+
+        <button className={`backtop flex-center ${isBtVisible? 'show' : ''}`} onClick={scrollToTop} aria-label='חזור למעלה' title='חזור למעלה'>
+            <img src={ArrowUp} alt='חזור למעלה'/>
+        </button>
+        </>
     )
 }
 
