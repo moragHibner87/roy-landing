@@ -1,7 +1,7 @@
 import './landing/assets/css/global.css'
 import './landing/assets/css/fonts.css'
 
-import Header from './landing/shared/Header'
+import Header from './landing/shared/header/Header'
 import Hero from './landing/components/hero/Hero'
 import SecRecom from './landing/components/sec-recom/SecRecom'
 import SecGrdeA from './landing/components/sec-grade-a/SecGradeA'
@@ -12,7 +12,7 @@ import SecFAQ from './landing/components/sec-faq/SecFAQ'
 import SecAbout from './landing/components/sec-about/SecAbout'
 import SecSlider from './landing/components/sec-slider/SecSlider'
 import SecRecomRoy from './landing/components/sec-recom-roy/SecRecomRoy'
-import Footer from './landing/shared/Footer'
+import Footer from './landing/shared/footer/Footer'
 
 function App() {
 

@@ -4,6 +4,7 @@
     --blue-dark: #0761A6;
     --blue: #58B4F0;
     --blue-light: #DEF7FE;
+    --green: #6FCF4D;
     --green-light: #EAFDC5;
     --yellow: #FFF7B2;
     --light: #FAF8ED;
@@ -30,6 +31,9 @@
 }
 .text-green-light{
     color: #B0F598;
+}
+.text-green{
+    color: var(--green);
 }
 .text-white{
     color: white;

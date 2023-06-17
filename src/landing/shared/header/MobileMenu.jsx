@@ -1,4 +1,4 @@
-import Close from '../assets/images/close.svg'
+import Close from '../../assets/images/close.svg'
 
 function MobileMenu({ isOpen, toggleMenu }){
     return(

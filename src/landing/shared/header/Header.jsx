@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 
 import './header.css'
-import Logo from '../assets/images/logo.svg'
-import ArrowUp from '../assets/images/arrow-up.svg'
+import Logo from '../../assets/images/logo.svg'
+import ArrowUp from '../../assets/images/arrow-up.svg'
 import MobileMenu from './MobileMenu';
 
 function Header(){
